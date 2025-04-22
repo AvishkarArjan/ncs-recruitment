@@ -47,7 +47,8 @@ function Details() {
     if (!formData.phone_number.trim())
       newError.phone_number = "Phone Number is required.";
     if (!formData.resume_link.trim())
-      newError.phone_number = "Resume Link is required.";
+      newError.resume_link = "Resume Link is required.";
+
     if (!formData.roll_number.trim())
       newError.roll_number = "Roll Number is required.";
     return newError;
@@ -388,15 +389,19 @@ function Details() {
             </div> */}
 
             <div>
-              <label for="username" class="text-white text-xs block mb-1">
+              <label
+                htmlFor="phone_number"
+                className="text-white text-xs block mb-1"
+              >
                 📞 Phone Number
               </label>
               <input
+                id="phone_number"
                 type="tel"
                 name="phone_number"
                 value={formData.phone_number}
                 onChange={handleChange}
-                className="bg-black/50 backdrop-invert backdrop-opacity-10 placeholder:text-gray-300 text-white border border-gray-100/20 rounded-sm py-0.5 px-2  placeholder:text-gray-400 focus:outline-none text-sm/6 w-full "
+                className="bg-black/50 backdrop-invert backdrop-opacity-10 placeholder:text-gray-300 text-white border border-gray-100/20 rounded-sm py-0.5 px-2  placeholder:text-gray-400 focus:outline-none text-sm/6 w-full"
                 placeholder="Enter your Phone Number"
               />
               {errors.phone_number && (
@@ -407,15 +412,19 @@ function Details() {
             </div>
 
             <div>
-              <label for="username" class="text-white text-xs block mb-1">
+              <label
+                htmlFor="resume_link"
+                className="text-white text-xs block mb-1"
+              >
                 Resume Link (Google Drive etc)
               </label>
               <input
+                id="resume_link"
                 type="text"
                 name="resume_link"
                 value={formData.resume_link}
                 onChange={handleChange}
-                className="bg-black/50 backdrop-invert backdrop-opacity-10 placeholder:text-gray-300 text-white border border-gray-100/20 rounded-sm py-0.5 px-2  placeholder:text-gray-400 focus:outline-none text-sm/6 w-full "
+                className="bg-black/50 backdrop-invert backdrop-opacity-10 placeholder:text-gray-300 text-white border border-gray-100/20 rounded-sm py-0.5 px-2  placeholder:text-gray-400 focus:outline-none text-sm/6 w-full"
                 placeholder="Enter your Resume"
               />
               {errors.resume_link && (
