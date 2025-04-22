@@ -78,7 +78,7 @@ function Details() {
 
   return (
     <div
-      className="overflow-auto relative w-full h-screen flex justify-center px-4 bg-cover bg-center"
+      className="overflow-auto relative w-full h-screen flex justify-center px-4 bg-cover bg-center pb-20"
       style={{
         backgroundImage: `url(${backgroundimage})`,
       }}
@@ -86,7 +86,7 @@ function Details() {
       {/* Overlay for dimming */}
       {/* <div className="fixed inset-0 bg-black opacity-60 z-0"></div> */}
 
-      <div className="w-max-7xl gap-10 justify-between items-center my-15 m-3">
+      <div className="w-max-7xl gap-10 justify-between items-center my-15 ">
         {/* Details */}
         <div className="relative z-10 text-white  rounded-xl  m-2 p-4 max-w-2xl w-full mx-4">
           <div className="w-full mb-10">
@@ -234,7 +234,7 @@ function Details() {
             <img src={logo} alt="" />
           </div>
 
-          <form className="space-y-4" onSubmit={handleSubmit}>
+          <form className="space-y-4 " onSubmit={handleSubmit}>
             <div>
               <label for="username" class="text-white text-xs block mb-1">
                 👤 Full Name
@@ -447,7 +447,7 @@ function Details() {
 
             <button
               type="submit"
-              className="flex items-center justify-center w-full py-1 bg-blue-600 text-white rounded-md hover:bg-blue-800 transition disabled:opacity-70"
+              className="flex items-center justify-center w-full py-1 bg-blue-600 text-white rounded-md hover:bg-blue-800 transition disabled:opacity-70 mb-10"
               disabled={loading}
             >
               {loading ? (

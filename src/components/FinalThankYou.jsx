@@ -1,5 +1,5 @@
 import React from "react";
-import backgroundimage from "../../src/assets/bg-1.jpg";
+import backgroundimage from "../../src/assets/bg.png";
 import logo from '../assets/ncs-logo.svg'; // adjust the path as needed
 
 function FinalThankYou() {
@@ -26,7 +26,7 @@ function FinalThankYou() {
         </h1>
 
         <p className="text-xl mb-2">We appreciate your registration.</p>
-        <p className="text-lg">See you at the workshop!</p>
+        <p className="text-lg">See you at the Recruitments!</p>
 
         <div className="mt-10 relative inline-flex group">
           <div className="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
