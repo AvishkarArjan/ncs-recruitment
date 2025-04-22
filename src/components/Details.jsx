@@ -5,6 +5,7 @@ import backgroundimage from "../../src/assets/bg.png";
 import { CgSpinner } from "react-icons/cg";
 import logo from "../assets/ncs-logo.svg"; // adjust the path as needed
 import ncs from "../assets/NCS-RECRUITMENT-cropped.svg";
+import FormCard from "./FormCard";
 
 function Details() {
   const [checked, setChecked] = useState(false);
@@ -90,6 +91,14 @@ function Details() {
         {/* Details */}
         <div className="relative z-10 text-white  rounded-xl  m-2 p-4 max-w-2xl w-full mx-4">
           <div className="w-full mb-10">
+            <div className="relative w-20 h-10 flex items-center justify-center">
+              <div className="absolute inset-0 bg-black/30 backdrop-blur-sm rounded-lg z-0" />
+              <img
+                src={logo}
+                alt="NCS Logo"
+                className="relative z-10 w-full h-auto rounded-lg object-contain"
+              />
+            </div>
             <img src={ncs} className="" width={500} alt="" />
             {/* <p className="text-sm text-gray-500">The first ever workshop on Agentic AI <i>@JSS Noida.</i></p> */}
           </div>
@@ -221,20 +230,17 @@ function Details() {
         </div>
 
         {/* Form */}
-        <div className="bg-black/30 rounded-lg backdrop-invert backdrop-opacity-10 p-4 relative z-10 w-full max-w-2xl shadow-2xl">
-          <div className="flex justify-between">
-            <div className="flex  flex-col items-start mb-4">
-              <h2 className="text-white text-2xl font-bold mb-1 text-center">
-                Registration Form
-              </h2>
-              <p className="text-white text-xs">
-                Your details will be verified for the Recruitments.
-              </p>
-            </div>
-            <img src={logo} alt="" />
+        <div className="bg-black/30 rounded-lg backdrop-invert backdrop-opacity-10 p-6 relative z-10 w-full max-w-2xl shadow-2xl mx-auto">
+          <div className="flex flex-col items-start mb-6">
+            <h2 className="text-white text-2xl font-bold mb-1 text-center w-full">
+              Registration Form
+            </h2>
+            <p className="text-white text-xs">
+              Your details will be verified for the Recruitments.
+            </p>
           </div>
 
-          <form className="space-y-4 " onSubmit={handleSubmit}>
+          <form className="space-y-5" onSubmit={handleSubmit}>
             <div>
               <label for="username" class="text-white text-xs block mb-1">
                 👤 Full Name
@@ -447,37 +453,40 @@ function Details() {
               />
             </div>
 
-            <button
-              type="submit"
-              className="flex items-center justify-center w-full py-1 bg-blue-600 text-white rounded-md hover:bg-blue-800 transition disabled:opacity-70 mb-10"
-              disabled={loading}
-            >
-              {loading ? (
-                <>
-                  <CgSpinner className="animate-spin h-5 w-5 mr-2" />
-                  Submitting...
-                </>
-              ) : (
-                <>
-                  <i>Submit</i>
-                  <svg
-                    className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 14 10"
-                  >
-                    <path
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M1 5h12m0 0L9 1m4 4L9 9"
-                    />
-                  </svg>
-                </>
-              )}
-            </button>
+            <div className="relative group mt-4 w-full">
+              <div className="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-full blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
+
+              <button
+                type="submit"
+                className="relative flex items-center justify-center gap-2 w-full py-2 px-6 text-base font-bold text-white bg-gray-900 rounded-full hover:scale-105 transition duration-200 z-10 shadow-lg disabled:opacity-50"
+                disabled={loading}
+              >
+                {loading ? (
+                  <>
+                    <CgSpinner className="animate-spin h-5 w-5" />
+                    Submitting...
+                  </>
+                ) : (
+                  <>
+                    Submit
+                    <svg
+                      className="rtl:rotate-180 w-4 h-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 14 10"
+                    >
+                      <path
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M1 5h12m0 0L9 1m4 4L9 9"
+                      />
+                    </svg>
+                  </>
+                )}
+              </button>
+            </div>
           </form>
         </div>
       </div>
