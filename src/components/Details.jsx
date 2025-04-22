@@ -4,8 +4,7 @@ import { useNavigate } from "react-router-dom";
 import backgroundimage from "../../src/assets/bg.png";
 import { CgSpinner } from "react-icons/cg";
 import logo from "../assets/ncs-logo.svg"; // adjust the path as needed
-import ncs from '../assets/NCS-RECRUITMENT-cropped.svg';
-
+import ncs from "../assets/NCS-RECRUITMENT-cropped.svg";
 
 function Details() {
   const [checked, setChecked] = useState(false);
@@ -27,9 +26,8 @@ function Details() {
     roll_number: "",
     phone_number: "",
     resume_link: "",
-    github_link:"",
-    behance_link : "",
-
+    github_link: "",
+    behance_link: "",
   });
 
   const [errors, setErrors] = useState({});
@@ -45,8 +43,10 @@ function Details() {
     if (!formData.email.trim()) newError.email = "Email ID is required.";
     if (!formData.year) newError.year = "Year is required.";
     if (!formData.branch.trim()) newError.branch = "Branch is required.";
-    if (!formData.phone_number.trim()) newError.phone_number = "Phone Number is required.";
-    if (!formData.resume_link.trim()) newError.phone_number = "Resume Link is required.";
+    if (!formData.phone_number.trim())
+      newError.phone_number = "Phone Number is required.";
+    if (!formData.resume_link.trim())
+      newError.phone_number = "Resume Link is required.";
     if (!formData.roll_number.trim())
       newError.roll_number = "Roll Number is required.";
     return newError;
@@ -394,7 +394,9 @@ function Details() {
                 placeholder="Enter your Phone Number"
               />
               {errors.phone_number && (
-                <p className="text-red-600 text-sm mt-1">{errors.phone_number}</p>
+                <p className="text-red-600 text-sm mt-1">
+                  {errors.phone_number}
+                </p>
               )}
             </div>
 
@@ -411,7 +413,9 @@ function Details() {
                 placeholder="Enter your Resume"
               />
               {errors.resume_link && (
-                <p className="text-red-600 text-sm mt-1">{errors.resume_link}</p>
+                <p className="text-red-600 text-sm mt-1">
+                  {errors.resume_link}
+                </p>
               )}
             </div>
 
@@ -427,12 +431,11 @@ function Details() {
                 className="bg-black/50 backdrop-invert backdrop-opacity-10 placeholder:text-gray-300 text-white border border-gray-100/20 rounded-sm py-0.5 px-2  placeholder:text-gray-400 focus:outline-none text-sm/6 w-full "
                 placeholder="Enter your Github Link"
               />
-              
             </div>
 
             <div>
               <label for="username" class="text-white text-xs block mb-1">
-                Behance Link 
+                Behance Link
               </label>
               <input
                 type="tel"
@@ -442,7 +445,6 @@ function Details() {
                 className="bg-black/50 backdrop-invert backdrop-opacity-10 placeholder:text-gray-300 text-white border border-gray-100/20 rounded-sm py-0.5 px-2  placeholder:text-gray-400 focus:outline-none text-sm/6 w-full "
                 placeholder="Enter your Behance Profile Link"
               />
-              
             </div>
 
             <button
