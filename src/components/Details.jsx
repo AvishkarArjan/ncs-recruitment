@@ -288,10 +288,10 @@ function Details() {
                   Select year
                 </option>
                 {/* <option value="1st" className="text-white bg-black">1st Year</option> */}
-                <option value="2nd" className="text-white bg-black">
+                <option value="1st" className="text-white bg-black">
                   1st Year
                 </option>
-                <option value="3rd" className="text-white bg-black">
+                <option value="2nd" className="text-white bg-black">
                   2nd Year
                 </option>
                 {/* <option value="4th" className="text-white bg-black">4th Year</option> */}
