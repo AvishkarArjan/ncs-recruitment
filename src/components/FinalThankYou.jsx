@@ -25,7 +25,9 @@ function FinalThankYou() {
           You're Registered!
         </h1>
 
-        <p className="text-xl mb-2">We appreciate your registration.</p>
+        <p className="text-xl mb-2">We appreciate your registration. Join our Whatsapp group : 
+          <a href="https://chat.whatsapp.com/FZtDuuBxXrg1x3KzbQ6paT" className="ml-2 gap-2 w-full py-4 px-6 text-base font-bold text-white bg-gray-900 rounded-full hover:scale-105 transition duration-200 z-10 shadow-lg disabled:opacity-50">Click here</a>
+          </p>
         <p className="text-lg">See you at the Recruitments!</p>
 
         <div className="mt-10 relative inline-flex group">
