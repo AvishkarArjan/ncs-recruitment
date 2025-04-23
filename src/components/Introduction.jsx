@@ -53,9 +53,9 @@ function Introduction() {
 
         {/* Venue/Date */}
         <div className="text-black text-sm text-center space-y-1">
-          <p>Venue: AB1, Computer Center</p>
-          <p>Date: April 23, Onwards (Wednesday)</p>
-          <p>Time: 1:30 PM Onwards</p>
+        <p className="text-xl">Drive starts from : 24 Apr 2025</p>
+
+          {/* <p>Time: 1:30 PM Onwards</p> */}
         </div>
 
         {/* Button */}
